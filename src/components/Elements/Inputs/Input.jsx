@@ -9,6 +9,7 @@ const Input = (props) => {
 				name={name}
 				type={type}
 				placeholder={placeholder}
+				id={name}
 			/>
 		</>
 	);
