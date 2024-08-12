@@ -1,25 +1,8 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-
-function Button(props) {
-	const { variant = "bg-black", children = "Button" } = props;
-	return (
-		<button
-			className={`${variant} h-10 rounded-md px-6 font-semibold text-white`}
-			type="submit"
-		>
-			{children}
-		</button>
-	);
-}
-
-Button.propTypes = {
-	variant: PropTypes.string,
-	children: PropTypes.string,
-};
+import Button from "./components/Elements/Buttons/Button";
 
 function App() {
 	const [count, setCount] = useState(0);
