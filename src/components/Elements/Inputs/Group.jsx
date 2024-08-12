@@ -9,7 +9,7 @@ const Group = (props) => {
 };
 
 Group.propTypes = {
-	children: PropTypes.array,
+	children: PropTypes.node,
 };
 
 export default Group;
