@@ -5,11 +5,12 @@ import "./index.css";
 import LoginPage from "./pages/login.jsx";
 import RegisterPage from "./pages/register.jsx";
 import Errorpage from "./pages/404.jsx";
+import HomePage from "./pages/home.jsx";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <div>Hello World!</div>,
+		element: <HomePage />,
 		errorElement: <Errorpage />,
 	},
 	{
