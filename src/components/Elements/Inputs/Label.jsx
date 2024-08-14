@@ -16,7 +16,7 @@ const Label = (props) => {
 
 Label.propTypes = {
 	htmlFor: PropTypes.string,
-	children: PropTypes.node,
+	children: PropTypes.element,
 };
 
 export default Label;

@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const AuthLayout = (props) => {
-	const { children, title } = props;
+	const { children, title, type } = props;
 	return (
 		<>
 			<div className="flex min-h-screen flex-col items-center justify-center">
@@ -13,15 +14,47 @@ const AuthLayout = (props) => {
 						Welcome, Please enter your details.
 					</p>
 					{children}
+					<Navigation type={type} />
 				</div>
 			</div>
 		</>
 	);
 };
 
+const Navigation = ({ type }) => {
+	if (type === "login") {
+		return (
+			<p className="mt-2 text-center text-base">
+				Don&apos;t have an account? {""}
+				{type === "login" && (
+					<Link to="/register" className="font-bold text-blue-700">
+						Register
+					</Link>
+				)}
+			</p>
+		);
+	} else {
+		return (
+			<p className="mt-2 text-center text-base">
+				Already have an account? {""}
+				{type === "register" && (
+					<Link to="/login" className="font-bold text-blue-700">
+						Login
+					</Link>
+				)}
+			</p>
+		);
+	}
+};
+
 AuthLayout.propTypes = {
-	children: PropTypes.node,
+	children: PropTypes.element,
 	title: PropTypes.string,
+	type: PropTypes.string,
+};
+
+Navigation.propTypes = {
+	type: PropTypes.string,
 };
 
 export default AuthLayout;
