@@ -6,7 +6,7 @@ const CardProduct = (props) => {
 	const { children } = props;
 	return (
 		<>
-			<div className="w-full max-w-sm rounded-lg border border-gray-200 bg-gray-800 shadow">
+			<div className="mx-2 flex w-full max-w-sm flex-col justify-between rounded-lg border border-gray-200 bg-gray-800 shadow">
 				{children}
 			</div>
 		</>
@@ -14,7 +14,7 @@ const CardProduct = (props) => {
 };
 
 CardProduct.propTypes = {
-	children: PropTypes.element,
+	children: PropTypes.node,
 };
 
 const Image = (props) => {
@@ -36,7 +36,7 @@ const Body = (props) => {
 	const { title, children } = props;
 	return (
 		<>
-			<div className="px-5 pb-6">
+			<div className="h-full px-5 pb-6">
 				<Link to="">
 					<h5 className="text-xl font-semibold tracking-tight text-white">
 						{title}
@@ -49,7 +49,7 @@ const Body = (props) => {
 };
 
 Body.propTypes = {
-	children: PropTypes.element,
+	children: PropTypes.node,
 	title: PropTypes.string,
 };
 
