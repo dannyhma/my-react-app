@@ -48,7 +48,7 @@ const Navigation = ({ type }) => {
 };
 
 AuthLayout.propTypes = {
-	children: PropTypes.element,
+	children: PropTypes.node,
 	title: PropTypes.string,
 	type: PropTypes.string,
 };
