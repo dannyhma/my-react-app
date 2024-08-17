@@ -1,5 +1,6 @@
 import Button from "../components/Elements/Buttons/Button";
 import CardProduct from "../components/Fragments/CardProduct";
+import Counter from "../components/Fragments/Counter";
 
 const products = [
 	{
@@ -55,6 +56,9 @@ const ProductPage = () => {
 						<CardProduct.Price price={product.price} />
 					</CardProduct>
 				))}
+			</div>
+			<div className="w-100 flex justify-center">
+				<Counter />
 			</div>
 		</>
 	);
